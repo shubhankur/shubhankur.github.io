@@ -327,14 +327,26 @@ h2.slogan{
 	font-size: 18px;
 	padding: 0 0 0 20px;
 }
-.progress li span.photoshop{width: 100%;}
-.progress li span.illustrator{width: 70%;}
-.progress li span.indesign{width: 40%;}
-.progress li span.flash{width: 80%;}
-.progress li span.html{width: 75%;}
-.progress li span.wordpress{width: 85%;}
-.progress li span.jquery{width: 70%;}
-.progress li span.seo{width: 40%;}
+.progress li span.JAVA{width: 90%;}
+.progress li span.SpringBoot{width: 100%;}
+.progress li span.Python{width: 90%;}
+.progress li span.NLP{width: 75%;}
+.progress li span.NodeJs{width: 75%;}
+.progress li span.NeuralNetworks{width: 60%;}
+.progress li span.RESTAPI{width: 90%;}
+.progress li span.JUnit{width: 100%;}
+.progress li span.Mockito{width: 100%;}
+.progress li span.Docker{width: 85%;}
+.progress li span.Kubernetes{width: 80%;}
+.progress li span.Kafka{width: 70%;}
+.progress li span.OpenCV{width: 85%;}
+.progress li span.Keras{width: 80%;}
+.progress li span.TensorFlow{width: 85%;}
+.progress li span.Git{width: 100%;}
+.progress li span.Heroku{width: 100%;}
+.progress li span.SQL{width: 100%;}
+.progress li span.Mongo{width: 100%;}
+
 .plagin_list{
 	width: 100%;
 	overflow: hidden;
@@ -512,10 +524,9 @@ transition: all 0.5s ease-in-out;
 }
 .box_contact span{
 	color: #fff;
-	font-family: 'novecento_sans_widebook';
+	font-family: 'arial';
 	font-size: 30px;
 	line-height: 32px;
-	text-transform: uppercase;
 	display: block;
 	margin: 0 0 55px;
 	padding: 5px 0 18px 80px;
@@ -539,11 +550,15 @@ transition: all 0.5s ease-in-out;
 }
 .footer-content .social{
 	overflow:hidden;
-	margin: 0 auto 45px;
+	position: absolute;
+	width: 500px;
+	left: 50%;
+	margin: 45px auto 45px;
+	transform: translate(-50%, -50%);
 	width: 670px;
 }
 .footer-content .social li{
-	float:left;
+	float: left;
 	margin: 0 0 0 10px;
 	border-radius: 50%;
 	behavior: url(css/PIE.htc);
@@ -554,13 +569,13 @@ transition: all 0.5s ease-in-out;
 	position:relative;
 	display: table;
 }
-.footer-content .social li:first-child{margin: 0;}
+
 .footer-content .social li:hover{
 	background: #50af6f;
 	-webkit-transition: all 0.5s ease-in-out;
--moz-transition: all 0.5s ease-in-out;
--o-transition: all 0.5s ease-in-out;
-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 .footer-content .social li a{
 	display: table-cell;	
@@ -570,7 +585,7 @@ transition: all 0.5s ease-in-out;
 .footer-content .social li.facebook a{background: url(../images/icon_fb.png) no-repeat 50% 50%;}
 .footer-content .social li.google a{background: url(../images/icon_gl.png) no-repeat 50% 50% ;}
 .footer-content .social li.twitter a{background: url(../images/icon_tw.png) no-repeat 50% 50% ;}
-.footer-content .social li.pinterest a{background: url(../images/icon_pn.png) no-repeat 50% 50%;}
+.footer-content .social li.linkedin a{background: url(../images/linkedin.png) no-repeat 50% 50%;}
 .footer-content p{
 	font:18px/20px Arial, Helvetica, sans-serif;
 	display: block;
@@ -653,6 +668,10 @@ transition: all 0.5s ease-in-out;
 		background-image: url(../images/icon_email@x2.png);
 		background-size:51px 38px;
 	}
+	.footer-content .social li.linkedin a{
+		background-image: url(../images/linkedin2.png);
+		background-size:51px 38px;
+	}
 	.footer-content .social li.facebook a{
 		background-image: url(../images/icon_fb@x2.png);
 		background-size:20px 38px;
@@ -664,10 +683,6 @@ transition: all 0.5s ease-in-out;
 	.footer-content .social li.twitter a{
 		background-image: url(../images/icon_tw@x2.png);
 		background-size:44px 34px;
-	}
-	.footer-content .social li.pinterest a{
-		background-image: url(../images/icon_pn@x2.png);
-		background-size:38px 38px;
 	}
 	.plagin_list li.li_1 a{
 		background-image: url(../images/icon_ps@x2.png);
