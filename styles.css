@@ -352,7 +352,7 @@ em {
 
 .signal-bar {
   display: grid;
-  grid-template-columns: 1.15fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   border-bottom: 1px solid var(--line);
   background: var(--paper);
 }
