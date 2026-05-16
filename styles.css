@@ -231,7 +231,7 @@ em {
   display: grid;
   grid-template-columns: minmax(260px, 0.68fr) minmax(0, 1fr);
   gap: clamp(32px, 6vw, 86px);
-  align-items: end;
+  align-items: center;
   min-height: calc(100dvh - 64px);
   max-width: 1480px;
   margin: 0 auto;
@@ -240,7 +240,7 @@ em {
 .hero-photo-wrap {
   position: sticky;
   bottom: 34px;
-  align-self: end;
+  align-self: center;
   display: grid;
   gap: 18px;
 }
@@ -288,8 +288,8 @@ em {
 .hero h1 {
   max-width: 1040px;
   margin-top: 20px;
-  font-size: clamp(54px, 9vw, 150px);
-  line-height: 0.92;
+  font-size: clamp(54px, 6.4vw, 104px);
+  line-height: 0.96;
   letter-spacing: -0.035em;
 }
 
@@ -958,17 +958,107 @@ em {
 
 /* ---------- Why me ---------- */
 
-.why-section {
-  background: var(--ink);
-  color: var(--paper);
+.why-me-section {
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
 }
 
-.why-section .chapter {
-  color: #7fd3c6;
+.why-me-stack {
+  display: grid;
+  gap: clamp(24px, 4vw, 42px);
+  margin-top: clamp(44px, 6vw, 78px);
 }
 
-.why-copy {
-  color: rgba(255, 253, 247, 0.72);
+.why-me-card {
+  display: grid;
+  gap: 18px;
+  padding-top: clamp(28px, 4vw, 44px);
+  border-top: 1px solid var(--line);
+}
+
+.why-me-card.featured {
+  padding: clamp(28px, 4vw, 46px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--paper);
+}
+
+.why-me-card h3 {
+  max-width: 980px;
+  font-size: clamp(32px, 4.4vw, 68px);
+  letter-spacing: -0.034em;
+}
+
+.why-me-card p:not(.micro) {
+  max-width: 820px;
+  color: var(--muted);
+  font-size: clamp(17px, 1.8vw, 21px);
+  line-height: 1.45;
+  letter-spacing: -0.006em;
+}
+
+.why-me-card.featured p:not(.micro):first-of-type,
+.origin-card p:not(.micro) {
+  color: var(--ink);
+}
+
+.number-row.compact {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: clamp(20px, 3vw, 34px);
+  background: var(--bg);
+}
+
+.number-row.compact div {
+  min-height: 126px;
+  padding: 20px;
+}
+
+.compact-timeline {
+  display: grid;
+  max-width: 860px;
+  margin-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.compact-timeline p {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 24px;
+  max-width: none;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.compact-timeline span,
+.credential-grid span {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.credential-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  max-width: 980px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.credential-grid p {
+  display: grid;
+  gap: 18px;
+  min-height: 180px;
+  padding: clamp(22px, 3vw, 32px);
+  border-right: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.credential-grid p:last-child {
+  border-right: 0;
 }
 
 /* ---------- The ask ---------- */
@@ -1093,6 +1183,10 @@ em {
     min-height: auto;
   }
 
+  .hero-copy {
+    order: -1;
+  }
+
   .hero-photo-wrap,
   .product-copy {
     position: static;
@@ -1153,12 +1247,6 @@ em {
 
   .site-nav a {
     font-size: 13px;
-  }
-
-  .site-nav a:nth-child(2),
-  .site-nav a:nth-child(3),
-  .site-nav a:nth-child(4) {
-    display: none;
   }
 
   .hero {
@@ -1231,6 +1319,20 @@ em {
   .timeline article {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .compact-timeline p,
+  .credential-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credential-grid p {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .credential-grid p:last-child {
+    border-bottom: 0;
   }
 
   .footer-links {
